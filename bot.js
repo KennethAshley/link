@@ -7,7 +7,7 @@ module.exports = (identifiers) => {
   return new Promise((resolve, reject) => {
     Bot.on('ready', () => {
       let guilds = Bot.guilds;
-      let guild = guilds.find('name', process.env.SERVER);
+      let guild = guilds.find('name', 'Crypto Picks');
       let channels = identifiers.map(channel => {
         return guild.channels.find('id', channel);
       });
