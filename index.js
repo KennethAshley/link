@@ -42,7 +42,7 @@ const getMessage = message => {
   }
   
   recipients.forEach(recipient => {
-    if (recipientId == recipient.id) {
+    if (recipientId && recipientId == recipient.id) {
       recipient.send({embed});
     }
   });
